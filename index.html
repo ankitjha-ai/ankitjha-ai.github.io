@@ -1,65 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ankit Jha | Machine Learning Researcher</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <header>
-    <img src="./images/img1.JPG" alt="Ankit Jha" class="avatar" />
-    <h1>Dr. Ankit Jha</h1>
-    <p>Machine Learning Researcher | Faculty, LNMIIT Jaipur | Ex-INRIA, IIT Bombay</p>
-  </header>
+  <main>
+    <!-- Sidebar -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./images/img1.JPG" alt="Ankit Jha" width="180" />
+        </figure>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+        <div class="info-content">
+          <h1 class="name" title="Ankit Jha">Dr. Ankit Jha</h1>
+          <p class="title">Machine Learning Researcher</p>
+          <p class="title">Faculty, LNMIIT Jaipur</p>
+        </div>
 
-  <div class="content">
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am a faculty member in the Department of Computer Science and Engineering at 
-        <strong>The LNM Institute of Information Technology, Jaipur</strong>.
-        My research interests lie in machine learning, computer vision, and remote sensing.
-      </p>
-      <a href="research.html" class="more-link">→ Explore my research</a>
-    </section>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:ankitjha16@gmail.com" class="contact-link">ankitjha16@gmail.com</a>
+            </div>
+          </li>
 
-    <section>
-      <h2>Research Highlights</h2>
-      <ul>
-        <li>Multi-task Learning and Domain Generalization</li>
-        <li>Vision-Language Models for Remote Sensing</li>
-        <li>Multi-modal and Cross-domain Representation Learning</li>
-      </ul>
-      <a href="research.html" class="more-link">→ View all publications</a>
-    </section>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Office</p>
+              <address>Room 80, Dept. of CSE, LNMIIT Jaipur, India</address>
+            </div>
+          </li>
+        </ul>
 
-    <section>
-      <h2>Our Team</h2>
-      <p>We are a group of passionate students and collaborators working on AI for vision and geospatial data.</p>
-      <a href="team.html" class="more-link">→ Meet the team</a>
-    </section>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://scholar.google.com" target="_blank" class="social-link">
+              <ion-icon name="school-outline"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/ankit-jha" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Interested in collaborating or joining the lab?</p>
-      <a href="contact.html" class="more-link">→ Get in touch</a>
-    </section>
+    <!-- Main content -->
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html"><button class="navbar-link active">Home</button></a></li>
+          <li class="navbar-item"><a href="research.html"><button class="navbar-link">Research</button></a></li>
+          <li class="navbar-item"><a href="team.html"><button class="navbar-link">Team</button></a></li>
+          <li class="navbar-item"><a href="contact.html"><button class="navbar-link">Contact</button></a></li>
+        </ul>
+      </nav>
 
-  </div>
+      <!-- About Section -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            I am a faculty member in the Department of Computer Science and Engineering at
+            <strong>The LNM Institute of Information Technology, Jaipur</strong>. 
+            My research focuses on developing efficient and generalizable learning methods in 
+            <em>computer vision, remote sensing, and multimodal learning</em>.
+          </p>
+        </section>
 
-  <footer>
-    © 2025 Ankit Jha — Built with ❤️ for research and teaching
-  </footer>
+        <!-- Research Glimpse -->
+        <section class="service">
+          <h3 class="h3 service-title">Research Highlights</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./images/icon-design.svg" alt="research icon" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Core Areas</h4>
+                <ul>
+                  <li>Multi-task Learning</li>
+                  <li>Domain Generalization</li>
+                  <li>Vision-Language Models</li>
+                </ul>
+                <a href="research.html" class="more-link">→ Explore full research</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Team Glimpse -->
+        <section class="service">
+          <h3 class="h3 service-title">Research Group</h3>
+          <p>
+            I supervise undergraduate and postgraduate students at LNMIIT, working on 
+            deep learning and computer vision applications.
+          </p>
+          <a href="team.html" class="more-link">→ Meet the team</a>
+        </section>
+
+        <!-- Contact Glimpse -->
+        <section class="service">
+          <h3 class="h3 service-title">Get in Touch</h3>
+          <p>
+            Interested in collaboration or joining the group?  
+            Reach out at <a href="mailto:ankitjha16@gmail.com">ankitjha16@gmail.com</a> or visit the Contact page.
+          </p>
+          <a href="contact.html" class="more-link">→ Contact page</a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script src="./js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
