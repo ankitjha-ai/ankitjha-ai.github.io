@@ -94,22 +94,6 @@
       height: 350px;
     }
 
-    .message-btn {
-      background-color: #0077cc;
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
-
-    .message-btn:hover {
-      background-color: #005fa3;
-    }
-
     .social-links {
       text-align: left;
       margin-top: 25px;
@@ -145,6 +129,9 @@
       main {
         padding: 2rem 1rem;
       }
+      .social-links {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -168,17 +155,11 @@
         <p><i class="fas fa-map-marker-alt"></i> Room 80, Dept. of Computer Science and Engineering,<br>
         The LNM Institute of Information Technology, Jaipur, Rajasthan, India, 302031</p>
 
-        <p><i class="fas fa-envelope"></i>
-          <a href="mailto:ankitjha16@gmail.com">ankitjha16@gmail.com</a>
-        </p>
-
         <p><i class="fas fa-phone-alt"></i> +91-141-3526211</p>
 
-        <button class="message-btn" onclick="window.location.href='mailto:ankitjha16@gmail.com';">
-          Send a Message
-        </button>
-
+        <!-- Social Links (with mail icon) -->
         <div class="social-links">
+          <a href="mailto:ankitjha16@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://github.com/ankitjha16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
