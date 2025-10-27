@@ -1,7 +1,7 @@
-### Hi there 👋
+### Thanks for visting my personal page 👋
 
 <!--
-**mayone23/mayone23** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**ankitjha-ai** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
