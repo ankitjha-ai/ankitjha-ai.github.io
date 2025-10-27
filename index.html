@@ -1,247 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankit Jha | Researcher</title>
-
-  <!-- ✅ Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <title>Ankit Jha | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
+    /* ====== BASIC STYLING ====== */
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f9f9fb;
-      color: #333;
+      background-color: #f9fafc;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #004aad;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
       margin: 0;
       padding: 0;
     }
 
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 3rem;
-    }
-
-    h1, h2, h3 {
-      color: #003366;
-    }
-
-    .navbar {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .navbar a {
+    nav ul li a {
       text-decoration: none;
-      color: #003366;
-      margin: 0 18px;
+      color: #333;
       font-weight: 500;
-      font-size: 17px;
       transition: color 0.3s ease;
     }
 
-    .navbar a:hover {
-      color: #0077cc;
+    nav ul li a:hover {
+      color: #004aad;
     }
 
-    .hero {
+    /* ====== MAIN SECTIONS ====== */
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2.section-title {
+      font-size: 1.8em;
+      color: #004aad;
+      margin-bottom: 20px;
+      border-left: 5px solid #004aad;
+      padding-left: 10px;
+    }
+
+    p {
+      font-size: 1.05em;
+    }
+
+    /* ====== TEACHING HIGHLIGHTS ====== */
+    .service-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 50px;
+      margin-bottom: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .hero img {
-      border-radius: 10px;
-      width: 220px;
-      height: auto;
+    .service-icon-box {
+      margin-right: 15px;
     }
 
-    .hero-text {
-      flex: 1;
-      min-width: 350px;
-      padding-left: 40px;
-    }
-
-    .hero-text h1 {
-      font-size: 2em;
-      margin-bottom: 0.3em;
-    }
-
-    .hero-text p {
-      line-height: 1.7;
-    }
-
-    .sections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .section-box {
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      padding: 25px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .section-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-    }
-
-    .section-box h3 {
-      margin-top: 0;
-      color: #003366;
-    }
-
-    .section-box p {
-      color: #555;
-      font-size: 15px;
-      line-height: 1.6;
+    .service-icon-box img {
+      width: 40px;
     }
 
     .read-more {
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: 500;
       display: inline-block;
       margin-top: 10px;
+      color: #004aad;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     .read-more:hover {
       text-decoration: underline;
     }
 
-    .social-links {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .social-links a {
-      color: #003366;
-      margin: 0 12px;
-      font-size: 26px;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #0077cc;
-    }
-
-    .citation-counter {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 15px;
-      color: #444;
-    }
-
+    /* ====== FOOTER ====== */
     footer {
+      background: #f1f3f7;
       text-align: center;
-      padding: 25px;
+      padding: 20px;
       color: #666;
-      font-size: 14px;
-      margin-top: 50px;
+      font-size: 0.9em;
+      border-top: 1px solid #ddd;
     }
 
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text {
-        padding-left: 0;
-        margin-top: 20px;
-      }
+    footer a {
+      color: #004aad;
+      text-decoration: none;
     }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
 <body>
-  <main>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <a href="index.html" style="color:#0077cc; font-weight:600;">Home</a>
-      <a href="research.html">Research</a>
-      <a href="team.html">Team</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
+  <header>
+    <h1>Ankit Jha</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="./images/img1.JPG" alt="Ankit Jha">
-      <div class="hero-text">
-        <h1>Dr. Ankit Jha</h1>
-        <p>Faculty, Department of Computer Science and Engineering<br>
-        The LNM Institute of Information Technology, Jaipur, India</p>
-
-        <p><b>Research Interests:</b> Multi-task Learning, Domain Generalization, Remote Sensing, Vision-Language Models</p>
-      </div>
+  <main class="container">
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Hello! I am <strong>Ankit Jha</strong>, currently working in the field of 
+        <em>Computer Vision, Deep Learning, and Remote Sensing</em>.  
+        My research focuses on multi-task learning, prompt learning, and domain generalization.  
+        I have published my work in leading venues such as <em>CVPR, ECCV, BMVC, WACV, and IEEE TGRS</em>.
+      </p>
     </section>
 
-    <!-- Section Summaries -->
-    <section class="sections">
-      <div class="section-box">
-        <h3>Research</h3>
-        <p>My research focuses on multi-modal and multi-domain learning, with an emphasis on improving model generalization across tasks and domains.</p>
-        <a href="research.html" class="read-more">Read more →</a>
-      </div>
-
-      <div class="section-box">
-        <h3>Publications</h3>
-        <p>Peer-reviewed publications in computer vision, remote sensing, and deep learning. Selected works published in IEEE and CVPR venues.</p>
-        <a href="publications.html" class="read-more">View publications →</a>
-      </div>
-
-      <div class="section-box">
-        <h3>Research Group</h3>
-        <p>Leading a group of enthusiastic undergraduate and postgraduate students working on various computer vision and AI problems.</p>
-        <a href="team.html" class="read-more">Meet the team →</a>
-      </div>
-
-      <div class="section-box">
-        <h3>Contact</h3>
-        <p>Room 80, Department of Computer Science & Engineering,<br>
-        The LNM Institute of Information Technology, Jaipur, India</p>
-        <a href="contact.html" class="read-more">Get in touch →</a>
-      </div>
+    <!-- ===== RESEARCH SECTION ===== -->
+    <section id="research">
+      <h2 class="section-title">Research Highlights</h2>
+      <p>
+        My current research interests revolve around developing learning frameworks that 
+        integrate domain adaptation, self-supervision, and cross-modal representation learning.
+      </p>
+      <a href="publications.html" class="read-more">Explore Publications →</a>
     </section>
 
-    <!-- Social & Citation -->
-    <div class="social-links">
-      <a href="mailto:ankitjha16@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/ankitjha16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-    </div>
+    <!-- ===== TEACHING HIGHLIGHTS ===== -->
+    <section id="teaching">
+      <h2 class="section-title">Teaching Highlights</h2>
 
-    <p class="citation-counter">Google Scholar Citations: <span id="citation-count">Loading...</span></p>
+      <ul class="service-list">
+        <li class="service-item">
+          <div class="service-icon-box">
+            <img src="assets/img/icons/education.png" alt="education icon">
+          </div>
+          <div class="service-content-box">
+            <p><strong>Foundation of Data Science (FDS)</strong>, M.Tech — Autumn 2024-25</p>
+            <p><strong>Generative Adversarial Networks and Its Applications (GANs)</strong>, B.Tech — Autumn 2024-25</p>
+          </div>
+        </li>
 
-    <footer>
-      <p>© 2025 Ankit Jha | The LNM Institute of Information Technology, Jaipur</p>
-    </footer>
+        <li class="service-item">
+          <div class="service-icon-box">
+            <img src="assets/img/icons/lab.png" alt="lab icon">
+          </div>
+          <div class="service-content-box">
+            <p><strong>Lab for FDS</strong>, M.Tech — Autumn 2024-25</p>
+            <p><strong>Lab for ANNDL</strong>, M.Tech — Spring 2024-25</p>
+          </div>
+        </li>
+      </ul>
+
+      <a href="teaching.html" class="read-more">View all teaching details →</a>
+    </section>
+
+    <!-- ===== TEAM SECTION ===== -->
+    <section id="team">
+      <h2 class="section-title">Research Team</h2>
+      <p>
+        I collaborate with a team of enthusiastic students and researchers working on 
+        multi-modal representation learning, large-scale aerial understanding, and 
+        generative modeling.  
+      </p>
+      <a href="team.html" class="read-more">Meet the Team →</a>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>
+        You can reach me at 
+        <a href="mailto:ankitjha16@gmail.com">ankitjha16@gmail.com</a> or visit the 
+        <a href="contact.html">Contact Page →</a> for more details.
+      </p>
+    </section>
   </main>
 
-  <!-- Placeholder JS for future Scholar integration -->
-  <script>
-    // Later, you can fetch data from an API or manually update
-    document.getElementById("citation-count").textContent = "382"; // Example static value
-  </script>
+  <footer>
+    <p>© 2025 Ankit Jha | <a href="https://github.com/">GitHub</a> | 
+    <a href="https://www.linkedin.com/">LinkedIn</a> | 
+    <a href="https://scholar.google.com/citations?user=-OryAUsAAAAJ&hl=en">Google Scholar</a></p>
+  </footer>
 </body>
 </html>
