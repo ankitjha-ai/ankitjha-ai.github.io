@@ -12,9 +12,6 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 
-  <!-- Main Page Styles -->
-  <link rel="stylesheet" href="./style.css">
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -25,9 +22,9 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 3rem 1rem;
+      padding: 3rem 3rem;
     }
 
     h1, h2, h3 {
@@ -43,8 +40,9 @@
     .navbar a {
       text-decoration: none;
       color: #003366;
-      margin: 0 15px;
+      margin: 0 18px;
       font-weight: 500;
+      font-size: 17px;
       transition: color 0.3s ease;
     }
 
@@ -53,6 +51,10 @@
     }
 
     .contact-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
       background: #ffffff;
       padding: 40px;
       border-radius: 10px;
@@ -60,8 +62,10 @@
     }
 
     .contact-details {
-      margin-bottom: 20px;
-      line-height: 1.7;
+      flex: 1;
+      min-width: 350px;
+      padding-right: 30px;
+      line-height: 1.8;
     }
 
     .contact-details i {
@@ -79,15 +83,15 @@
     }
 
     .map-container {
-      text-align: center;
-      margin-top: 30px;
+      flex: 1;
+      min-width: 350px;
     }
 
     iframe {
       border: 0;
       border-radius: 8px;
       width: 100%;
-      height: 400px;
+      height: 350px;
     }
 
     .message-btn {
@@ -107,14 +111,14 @@
     }
 
     .social-links {
-      text-align: center;
-      margin-top: 30px;
+      text-align: left;
+      margin-top: 25px;
     }
 
     .social-links a {
       color: #003366;
-      margin: 0 15px;
-      font-size: 28px;
+      margin: 0 12px 0 0;
+      font-size: 26px;
       transition: color 0.3s ease;
     }
 
@@ -124,10 +128,23 @@
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       color: #666;
       font-size: 14px;
-      margin-top: 20px;
+      margin-top: 30px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+      }
+      .contact-details, .map-container {
+        padding-right: 0;
+      }
+      main {
+        padding: 2rem 1rem;
+      }
     }
   </style>
 </head>
@@ -145,8 +162,9 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
-      <h2>Contact Me</h2>
+      <!-- Left Column -->
       <div class="contact-details">
+        <h2>Contact Me</h2>
         <p><i class="fas fa-map-marker-alt"></i> Room 80, Dept. of Computer Science and Engineering,<br>
         The LNM Institute of Information Technology, Jaipur, Rajasthan, India, 302031</p>
 
@@ -155,23 +173,20 @@
         </p>
 
         <p><i class="fas fa-phone-alt"></i> +91-141-3526211</p>
-      </div>
 
-      <div style="text-align: center;">
         <button class="message-btn" onclick="window.location.href='mailto:ankitjha16@gmail.com';">
           Send a Message
         </button>
+
+        <div class="social-links">
+          <a href="https://github.com/ankitjha16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://twitter.com/ankitjha16" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
       </div>
 
-      <!-- Social Links -->
-      <div class="social-links">
-        <a href="https://github.com/ankitjha16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-        <a href="https://twitter.com/ankitjha16" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-      </div>
-
-      <!-- Google Map -->
+      <!-- Right Column (Map) -->
       <div class="map-container">
         <h3>Find Me Here</h3>
         <iframe 
