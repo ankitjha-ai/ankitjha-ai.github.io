@@ -1,177 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Ankit Jha</title>
 
-    <!-- Fontawesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Ankit Jha</title>
 
-    <style>
-      /* ======== Reset ======== */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-      body {
-        background: #f5f6fa;
-      }
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 
-      /* ======== Navbar ======== */
-      nav {
-        width: 100%;
-        background: #007bff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 30px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+  <!-- Main Page Styles -->
+  <link rel="stylesheet" href="./style.css">
 
-      nav .logo {
-        color: #fff;
-        font-size: 22px;
-        font-weight: bold;
-        text-decoration: none;
-      }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
 
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-      }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
 
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-      }
+    h1, h2, h3 {
+      color: #00aaff;
+      text-align: center;
+    }
 
-      nav ul li a:hover {
-        text-decoration: underline;
-      }
+    .navbar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-      /* ======== Contact Container ======== */
-      .container {
-        margin: 50px auto;
-        max-width: 800px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-      }
+    .navbar a {
+      text-decoration: none;
+      color: #e0e0e0;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-      .details {
-        margin-bottom: 20px;
-      }
+    .navbar a:hover {
+      color: #00aaff;
+    }
 
-      .topic {
-        font-weight: bold;
-        font-size: 18px;
-        color: #007bff;
-        margin-bottom: 5px;
-      }
+    .contact-section {
+      background: #1e1e1e;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
 
-      .text-one,
-      .text-two {
-        font-size: 15px;
-        margin-top: 3px;
-      }
+    .contact-details {
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
 
-      .map-container iframe {
-        width: 100%;
-        height: 250px;
-        border: 0;
-        border-radius: 10px;
-        margin-top: 15px;
-      }
+    .contact-details i {
+      color: #00aaff;
+      margin-right: 10px;
+    }
 
-      .message-btn {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
+    .map-container {
+      text-align: center;
+      margin-top: 30px;
+    }
 
-      .message-btn:hover {
-        background-color: #0056b3;
-      }
+    iframe {
+      border: 0;
+      border-radius: 8px;
+      width: 100%;
+      height: 400px;
+    }
 
-      /* ======== Responsive ======== */
-      @media (max-width: 600px) {
-        nav {
-          flex-direction: column;
-          align-items: flex-start;
-        }
+    .message-btn {
+      background-color: #00aaff;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
 
-        nav ul {
-          flex-direction: column;
-          gap: 10px;
-          margin-top: 10px;
-        }
+    .message-btn:hover {
+      background-color: #0077cc;
+    }
 
-        .container {
-          margin: 20px;
-          padding: 20px;
-        }
-      }
-    </style>
-  </head>
+    .social-links {
+      text-align: center;
+      margin-top: 30px;
+    }
 
-  <body>
-    <!-- ======== Navigation Bar ======== -->
-    <nav>
-      <a href="index.html" class="logo">Ankit Jha</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    .social-links a {
+      color: #e0e0e0;
+      margin: 0 15px;
+      font-size: 28px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #00aaff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html" style="color:#00aaff;">Contact</a>
     </nav>
 
-    <!-- ======== Contact Section ======== -->
-    <div class="container">
-      <div class="address details">
-        <i class="fas fa-map-marker-alt"></i>
-        <div class="topic">Address</div>
-        <div class="text-one">Room 80, Dept. of Computer Science and Engineering</div>
-        <div class="text-one">The LNM Institute of Information Technology Jaipur, Rajasthan</div>
-        <div class="text-two">India, 302031</div>
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Contact Me</h2>
+      <div class="contact-details">
+        <p><i class="fas fa-map-marker-alt"></i> Room 80, Dept. of Computer Science and Engineering,<br>
+        The LNM Institute of Information Technology, Jaipur, Rajasthan, India, 302031</p>
+
+        <p><i class="fas fa-envelope"></i>
+          <a href="mailto:ankitjha16@gmail.com" style="color:#00aaff;">ankitjha16@gmail.com</a>
+        </p>
+
+        <p><i class="fas fa-phone-alt"></i> +91-141-3526211</p>
       </div>
 
-      <!-- 🗺️ Updated Embedded Google Map -->
-      <div class="map-container">
-        <iframe
-          src="https://maps.google.com/maps?width=600&height=400&hl=en&q=The%20LNMIIT&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-      <div class="message-button details" style="margin-top: 20px;">
-        <i class="fas fa-envelope"></i>
-        <div class="topic">Message Me</div>
-        <button
-          class="message-btn"
-          onclick="window.location.href='mailto:ankitjha16@gmail.com';"
-        >
+      <div style="text-align: center;">
+        <button class="message-btn" onclick="window.location.href='mailto:ankitjha16@gmail.com';">
           Send a Message
         </button>
       </div>
-    </div>
-  </body>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/ankitjha16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://twitter.com/ankitjha16" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <!-- Google Map -->
+      <div class="map-container">
+        <h3>Find me here</h3>
+        <iframe 
+          src="https://maps.google.com/maps?width=600&height=400&hl=en&q=The%20LNMIIT&t=&z=14&ie=UTF8&iwloc=B&output=embed" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Ankit Jha | Designed for a Researcher’s Portfolio</p>
+    </footer>
+  </main>
+</body>
 </html>
