@@ -2,146 +2,243 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ankit Jha | Machine Learning Researcher</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Jha | Researcher</title>
 
-  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9fb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 3rem;
+    }
+
+    h1, h2, h3 {
+      color: #003366;
+    }
+
+    .navbar {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #003366;
+      margin: 0 18px;
+      font-weight: 500;
+      font-size: 17px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #0077cc;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 50px;
+    }
+
+    .hero img {
+      border-radius: 10px;
+      width: 220px;
+      height: auto;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 350px;
+      padding-left: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 2em;
+      margin-bottom: 0.3em;
+    }
+
+    .hero-text p {
+      line-height: 1.7;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .section-box {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    .section-box h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .section-box p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .read-more {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      color: #003366;
+      margin: 0 12px;
+      font-size: 26px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #0077cc;
+    }
+
+    .citation-counter {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <main>
-    <!-- Sidebar -->
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="./images/img1.JPG" alt="Ankit Jha" width="180" />
-        </figure>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="index.html" style="color:#0077cc; font-weight:600;">Home</a>
+      <a href="research.html">Research</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-        <div class="info-content">
-          <h1 class="name" title="Ankit Jha">Dr. Ankit Jha</h1>
-          <p class="title">Machine Learning Researcher</p>
-          <p class="title">Faculty, LNMIIT Jaipur</p>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="./images/img1.JPG" alt="Ankit Jha">
+      <div class="hero-text">
+        <h1>Dr. Ankit Jha</h1>
+        <p>Faculty, Department of Computer Science and Engineering<br>
+        The LNM Institute of Information Technology, Jaipur, India</p>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+        <p><b>Research Interests:</b> Multi-task Learning, Domain Generalization, Remote Sensing, Vision-Language Models</p>
+      </div>
+    </section>
+
+    <!-- Section Summaries -->
+    <section class="sections">
+      <div class="section-box">
+        <h3>Research</h3>
+        <p>My research focuses on multi-modal and multi-domain learning, with an emphasis on improving model generalization across tasks and domains.</p>
+        <a href="research.html" class="read-more">Read more →</a>
       </div>
 
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:ankitjha16@gmail.com" class="contact-link">ankitjha16@gmail.com</a>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Office</p>
-              <address>Room 80, Dept. of CSE, LNMIIT Jaipur, India</address>
-            </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://scholar.google.com" target="_blank" class="social-link">
-              <ion-icon name="school-outline"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://github.com/ankit-jha" target="_blank" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-        </ul>
+      <div class="section-box">
+        <h3>Publications</h3>
+        <p>Peer-reviewed publications in computer vision, remote sensing, and deep learning. Selected works published in IEEE and CVPR venues.</p>
+        <a href="publications.html" class="read-more">View publications →</a>
       </div>
-    </aside>
 
-    <!-- Main content -->
-    <div class="main-content">
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a href="index.html"><button class="navbar-link active">Home</button></a></li>
-          <li class="navbar-item"><a href="research.html"><button class="navbar-link">Research</button></a></li>
-          <li class="navbar-item"><a href="team.html"><button class="navbar-link">Team</button></a></li>
-          <li class="navbar-item"><a href="contact.html"><button class="navbar-link">Contact</button></a></li>
-        </ul>
-      </nav>
+      <div class="section-box">
+        <h3>Research Group</h3>
+        <p>Leading a group of enthusiastic undergraduate and postgraduate students working on various computer vision and AI problems.</p>
+        <a href="team.html" class="read-more">Meet the team →</a>
+      </div>
 
-      <!-- About Section -->
-      <article class="about active" data-page="about">
-        <header>
-          <h2 class="h2 article-title">About Me</h2>
-        </header>
-        <section class="about-text">
-          <p>
-            I am a faculty member in the Department of Computer Science and Engineering at
-            <strong>The LNM Institute of Information Technology, Jaipur</strong>. 
-            My research focuses on developing efficient and generalizable learning methods in 
-            <em>computer vision, remote sensing, and multimodal learning</em>.
-          </p>
-        </section>
+      <div class="section-box">
+        <h3>Contact</h3>
+        <p>Room 80, Department of Computer Science & Engineering,<br>
+        The LNM Institute of Information Technology, Jaipur, India</p>
+        <a href="contact.html" class="read-more">Get in touch →</a>
+      </div>
+    </section>
 
-        <!-- Research Glimpse -->
-        <section class="service">
-          <h3 class="h3 service-title">Research Highlights</h3>
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./images/icon-design.svg" alt="research icon" width="40"></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Core Areas</h4>
-                <ul>
-                  <li>Multi-task Learning</li>
-                  <li>Domain Generalization</li>
-                  <li>Vision-Language Models</li>
-                </ul>
-                <a href="research.html" class="more-link">→ Explore full research</a>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Team Glimpse -->
-        <section class="service">
-          <h3 class="h3 service-title">Research Group</h3>
-          <p>
-            I supervise undergraduate and postgraduate students at LNMIIT, working on 
-            deep learning and computer vision applications.
-          </p>
-          <a href="team.html" class="more-link">→ Meet the team</a>
-        </section>
-
-        <!-- Contact Glimpse -->
-        <section class="service">
-          <h3 class="h3 service-title">Get in Touch</h3>
-          <p>
-            Interested in collaboration or joining the group?  
-            Reach out at <a href="mailto:ankitjha16@gmail.com">ankitjha16@gmail.com</a> or visit the Contact page.
-          </p>
-          <a href="contact.html" class="more-link">→ Contact page</a>
-        </section>
-      </article>
+    <!-- Social & Citation -->
+    <div class="social-links">
+      <a href="mailto:ankitjha16@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/ankitjha16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
     </div>
+
+    <p class="citation-counter">Google Scholar Citations: <span id="citation-count">Loading...</span></p>
+
+    <footer>
+      <p>© 2025 Ankit Jha | The LNM Institute of Information Technology, Jaipur</p>
+    </footer>
   </main>
 
-  <script src="./js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Placeholder JS for future Scholar integration -->
+  <script>
+    // Later, you can fetch data from an API or manually update
+    document.getElementById("citation-count").textContent = "3,245"; // Example static value
+  </script>
 </body>
 </html>
