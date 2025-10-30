@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Jha | Team</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+      color: #222;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #002b5b, #004b8f);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    nav {
+      background: #eef2f7;
+      text-align: center;
+      padding: 0.8rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #002b5b;
+      font-weight: 500;
+      margin: 0 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0078d7;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-header {
+      padding: 15px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #002b5b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    .accordion-header:hover {
+      background: #f1f4f9;
+    }
+
+    .accordion-header.active {
+      color: #0078d7;
+    }
+
+    .accordion-header i {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active i {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      padding: 0 20px;
+    }
+
+    .accordion-content.open {
+      padding: 20px;
+    }
+
+    .member {
+      display: flex;
+      align-items: center;
+      background: #f7f9fc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .member:hover {
+      background: #eef2f9;
+    }
+
+    .member img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+
+    .member h4 {
+      margin: 0;
+      color: #002b5b;
+      font-size: 1rem;
+    }
+
+    .member p {
+      margin: 3px 0 0;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #002b5b;
+      color: white;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .member {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .member img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Team</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="team.html" style="color:#0078d7;font-weight:600;">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Professor Section -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span><i class="fas fa-user-tie"></i> &nbsp; Professor / Advisor</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <div class="member">
+          <img src="assets/img/biplab.jpg" alt="Prof. Biplab Banerjee">
+          <div>
+            <h4>Prof. Biplab Banerjee</h4>
+            <p>Associate Professor, Department of Electrical Engineering, IIT Bombay</p>
+            <p>Research Areas: Computer Vision, Remote Sensing, Multi-Task Learning</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BTP Students -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span><i class="fas fa-user-graduate"></i> &nbsp; BTP Students</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <div class="member">
+          <img src="assets/img/student1.jpg" alt="Student Name">
+          <div>
+            <h4>Riya Sharma</h4>
+            <p>B.Tech, Computer Science, LNMIIT</p>
+            <p>Topic: Vision-Language Models for Remote Sensing</p>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="assets/img/student2.jpg" alt="Student Name">
+          <div>
+            <h4>Aditya Gupta</h4>
+            <p>B.Tech, Electronics and Communication, LNMIIT</p>
+            <p>Topic: Self-Distillation for Multimodal Learning</p>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="assets/img/student3.jpg" alt="Student Name">
+          <div>
+            <h4>Shruti Verma</h4>
+            <p>B.Tech, Computer Science, LNMIIT</p>
+            <p>Topic: Model Compression in Vision Transformers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DDP Students -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span><i class="fas fa-users"></i> &nbsp; DDP Students</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <div class="member">
+          <img src="assets/img/student4.jpg" alt="Student Name">
+          <div>
+            <h4>Manish Kumar</h4>
+            <p>DDP Student, IIT Bombay</p>
+            <p>Topic: Domain Generalization in Vision-Language Models</p>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="assets/img/student5.jpg" alt="Student Name">
+          <div>
+            <h4>Aishwarya Nair</h4>
+            <p>DDP Student, IIT Bombay</p>
+            <p>Topic: Multitask Learning for Satellite Image Understanding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Ankit Jha 
+  </footer>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const active = document.querySelector('.accordion-header.active');
+        if (active && active !== header) {
+          active.classList.remove('active');
+          active.nextElementSibling.style.maxHeight = 0;
+          active.nextElementSibling.classList.remove('open');
+        }
+
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        if (header.classList.contains('active')) {
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.classList.remove('open');
+          content.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
