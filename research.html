@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Jha | Research</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+      color: #222;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #002b5b, #004b8f);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    nav {
+      background: #eef2f7;
+      text-align: center;
+      padding: 0.8rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #002b5b;
+      font-weight: 500;
+      margin: 0 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0078d7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-header {
+      padding: 15px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #002b5b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    .accordion-header:hover {
+      background: #f1f4f9;
+    }
+
+    .accordion-header.active {
+      color: #0078d7;
+    }
+
+    .accordion-header i {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active i {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background: #fff;
+      padding: 0 20px;
+    }
+
+    .accordion-content.open {
+      padding: 15px 20px 25px;
+    }
+
+    .accordion-content p {
+      margin: 0;
+      text-align: justify;
+    }
+
+    .slide-link {
+      display: inline-flex;
+      align-items: center;
+      background: #0078d7;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: 12px;
+      transition: 0.3s;
+    }
+
+    .slide-link:hover {
+      background: #002b5b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #002b5b;
+      color: white;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Research</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html" style="color:#0078d7;font-weight:600;">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Multitask Learning -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Multitask Learning</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          My research focuses on building architectures that jointly optimize multiple related tasks for better generalization through shared representations. 
+          I work on adaptive weighting, task-interaction mechanisms, and cross-task attention for computer vision and remote sensing.
+        </p>
+        <a href="https://drive.google.com/your-slide-link" target="_blank" class="slide-link">
+          <i class="fas fa-file-powerpoint"></i>&nbsp; View Slides
+        </a>
+      </div>
+    </div>
+
+    <!-- Multimodal Learning -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Multimodal Learning</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          I integrate multiple modalities (images, text, audio) to develop robust multimodal representations. 
+          My work explores cross-modal alignment, fusion strategies, and transfer learning for zero-shot and few-shot tasks.
+        </p>
+        <a href="https://drive.google.com/your-slide-link" target="_blank" class="slide-link">
+          <i class="fas fa-file-powerpoint"></i>&nbsp; View Slides
+        </a>
+      </div>
+    </div>
+
+    <!-- Multi-Domain Learning -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Multi-Domain Learning</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          I design models that generalize across diverse domains by learning domain-invariant representations and leveraging prompt-based adaptation 
+          and self-supervised pretraining for domain-robust vision models.
+        </p>
+      </div>
+    </div>
+
+    <!-- Self-Distillation -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Self-Distillation</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          I study self-distillation where models refine their own representations by transferring knowledge from intermediate layers to deeper ones, 
+          improving accuracy without external teachers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Vision-Language Models -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Vision-Language Models</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          I work on adaptation strategies for large vision-language models such as CLIP and BLIP, including prompt tuning, domain adaptation, and semantic alignment 
+          for robust cross-modal understanding.
+        </p>
+      </div>
+    </div>
+
+    <!-- Few-Shot Learning -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Few-Shot Learning</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          I develop few-shot learning frameworks that combine meta-learning and self-supervision to enable efficient learning from limited data and unseen tasks.
+        </p>
+      </div>
+    </div>
+
+    <!-- Model Compression -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>Model Compression</span>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="accordion-content">
+        <p>
+          I explore pruning, quantization, and distillation to compress large-scale vision-language models, enabling efficient deployment on edge devices.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Ankit Jha | The LNM Institute of Information Technology
+  </footer>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const currentlyActive = document.querySelector('.accordion-header.active');
+        if (currentlyActive && currentlyActive !== header) {
+          currentlyActive.classList.remove('active');
+          currentlyActive.nextElementSibling.style.maxHeight = 0;
+          currentlyActive.nextElementSibling.classList.remove('open');
+        }
+
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        if (header.classList.contains('active')) {
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.classList.remove('open');
+          content.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
