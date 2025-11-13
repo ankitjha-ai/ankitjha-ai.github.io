@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,10 +136,24 @@
       margin: 0 12px;
       font-size: 26px;
       transition: color 0.3s ease;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     .social-links a:hover {
       color: #0077cc;
+    }
+
+    /* ✅ Google Scholar SVG style */
+    .google-scholar-icon svg {
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+      transition: fill 0.3s ease;
+    }
+
+    .google-scholar-icon:hover svg path {
+      fill: #0077cc;
     }
 
     .citation-counter {
@@ -224,13 +237,21 @@
       </div>
     </section>
 
-    <!-- Social & Citation -->
+    <!-- ✅ Social Links -->
     <div class="social-links">
       <a href="mailto:ankitjha16@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/ankitjha16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://scholar.google.com/citations?user=-OryAUsAAAAJ&hl=en" target="_blank" title="Google Scholar">
-        <img src="assets/img/icons/gsw.png" width="25" alt="Google Scholar">
+      <a href="https://github.com/ankitjha16" target="_blank" title="GitHub" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ankitjha16/" target="_blank" title="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+
+      <!-- ✅ Inline Google Scholar SVG -->
+      <a href="https://scholar.google.com/citations?user=-OryAUsAAAAJ&hl=en"
+         target="_blank" rel="noopener noreferrer"
+         title="Google Scholar" aria-label="Google Scholar"
+         class="google-scholar-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#003366" d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z"></path>
+          <path fill="#0077cc" d="M3 9v6c0 1.66 6 3 9 3s9-1.34 9-3V9l-9 4-9-4z"></path>
+        </svg>
       </a>
     </div>
 
@@ -244,7 +265,7 @@
   <!-- Placeholder JS for future Scholar integration -->
   <script>
     // Later, you can fetch data from Google Scholar API or update manually
-    document.getElementById("citation-count").textContent = "382"; // Example static value
+    document.getElementById("citation-count").textContent = "413"; // Example static value
   </script>
 </body>
 </html>
